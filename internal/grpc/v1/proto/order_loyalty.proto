@@ -12,7 +12,7 @@ message ConclusionRequest {
 
 message ConclusionResponse {
   bool   success = 1;
-  string message = 2;
+  string error_message = 2;
 }
 
 service ConclusionUserBalanceUseCase {

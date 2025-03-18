@@ -60,7 +60,7 @@ func (s *CreateOrderUseCaseHandler) Execute(ctx context.Context, order dto.Creat
 		return dto.Order{}, fmt.Errorf("error order service RPC: %w", err)
 	}
 	if !resp.Success {
-		return dto.Order{}, fmt.Errorf("lerror order service RPC: %s", resp.Message)
+		return dto.Order{}, fmt.Errorf("lerror order service RPC: %s", resp.ErrorMessage)
 	}
 
 	var orderDTO dto.Order
