@@ -2,6 +2,7 @@ package db
 
 import (
 	"context"
+
 	"github.com/pressly/goose/v3"
 
 	"github.com/Axel791/order/internal/config"

@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package v1;
+
+option go_package = "github.com/Axel791/order/internal/grpc/v1/pb;pb";
+
+message ConclusionRequest {
+  int64 order_id = 1;
+  int64 user_id  = 2;
+  int64 count    = 3;
+}
+
+message ConclusionResponse {
+  bool   success = 1;
+  string message = 2;
+}
+
+service ConclusionUserBalanceUseCase {
+  rpc Conclude(ConclusionRequest) returns (ConclusionResponse);
+}
